@@ -1,0 +1,16 @@
+<apex:page standardController="contact">
+    <apex:form >
+        <apex:pageblock title="Test Custom Contact Page">
+            <apex:pageBlockbuttons >
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Test Contact Section" columns="4">
+                <apex:inputField value="{!Contact.FirstName}"/>
+                <apex:inputField value="{!Contact.LastName}"/>
+                <apex:inputField value="{!Contact.Phone}"/>
+                <apex:inputField value="{!Contact.Email}"/>
+                <apex:inputField value="{!contact.Birthdate}"/>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

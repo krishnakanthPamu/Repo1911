@@ -1,0 +1,18 @@
+<aura:component >
+    
+    <aura:attribute name='map1' type='map' />
+    <aura:attribute name='list1' type='list' />
+    <lightning:button name='save' onclick="{!c.createmap}">
+        <aura:set attribute="label" value="create map" />
+    </lightning:button>
+    <br/>
+    <aura:iteration items="{!v.map1}" var="temp" indexVar="i">
+        map.key: {!temp.key}  and map.value: {!temp.value}  
+        <br/>
+    </aura:iteration>
+    
+    <aura:iteration items="{!v.list1}" var="temp" indexVar="i">
+        list.value: {!temp}  index: {!i}
+        <br/>
+    </aura:iteration>
+</aura:component>

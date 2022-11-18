@@ -1,0 +1,15 @@
+<apex:page controller="ReturnController">
+
+    <apex:form >
+        <apex:commandButton action="{!callMe}"
+                    oncomplete="processReturnedValue({!valueReturned}); "
+                    value="Save"/>
+    </apex:form>
+
+    <script>
+        var processReturnedValue = function(val){
+            alert('Returned Value: ' + val);
+        };
+    </script>
+
+</apex:page>

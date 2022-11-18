@@ -1,0 +1,3 @@
+<aura:component >
+    <aura:handler event="c:testEvent" action="{!c.handleEvent}" phase="capture" />
+</aura:component>

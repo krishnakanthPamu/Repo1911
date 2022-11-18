@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableforrecordhome,force:hasRecordId"
+                access="global"
+                controller="createQuickContact">
+    <aura:registerEvent name="quickContactEvent" type="c:quickContactEvent" />
+    <aura:attribute name="accountId" type="string" />
+    account Id: {!v.accountId}
+    <aura:attribute name="contact" type="contact" default="{'sobjectType': 'contact',
+                                                            'FirstName' : ' ',
+                                                             'LastName' : ' ',
+                                                             'Phone' : ' ',
+                                                             'Email' : ' '
+                                                           }" />
+    
+    <div class="slds-p-around_small">
+        <div class="slds-size_1-of-1 ">
+            <lightning:input type="text" name="fName" label='First Name' value="{!v.contact.FirstName}" placeholder="Type your First Name..." />
+            <lightning:input type="text" name="lName" label='Last Name' value="{!v.contact.LastName}" placeholder="Type your Last Name..." />
+            <lightning:input type="phone" name="Phone" label='Phone' value="{!v.contact.Phone}" placeholder="Type your Phone..." />
+            <lightning:input type="email" name="Email" label='Email' value="{!v.contact.Email}" placeholder="Type your Email..." />
+        </div>
+        <br/>
+        <lightning:button name="save" variant="brand" label="Create Contact" onclick="{!c.createContact}"  />
+    </div>
+    
+</aura:component>

@@ -1,0 +1,11 @@
+.class1{
+    color:white;
+    background: black;
+}
+
+div{
+    border: 4px solid blue;
+}
+:host{
+    border: 10px solid black;
+}

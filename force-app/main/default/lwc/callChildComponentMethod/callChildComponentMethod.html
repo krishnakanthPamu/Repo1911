@@ -1,0 +1,12 @@
+<template>
+		<!-- 	=======CALLING A CHILD COMPONENT METHOD TO SHOW THE MODAL/POPUP=========	 -->
+
+		<lightning-card>
+				<header style="font-size:20px"> Second Way to Show Popup/Modal</header>
+				</br>
+		<header style = "font-size:15px"> Call Child Method to show Popup/Modal</header>
+		<c-pop-up-new> </c-pop-up-new>
+		<lightning-input label = "Enter the text below" value = {enteredText} onchange={captureEnteredText}></lightning-input>
+		<lightning-button label='showChildComponentModal' onclick={callChildMethod} variant="brand"></lightning-button>
+		</lightning-card>
+</template>

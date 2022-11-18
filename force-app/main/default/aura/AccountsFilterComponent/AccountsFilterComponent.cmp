@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="string" name="fieldName"/>
+    <aura:attribute type="string" name="condition"/>
+    <aura:attribute type="string" name="inputValue"/>
+    <aura:attribute name="childShowFilterBlock" type="boolean" default="false"/>
+    <aura:attribute name="loadAllAccounts" type="boolean" default="false"/>
+
+    <aura:registerEvent name="filterEvent" type="c:showAccountswWthFilter" />
+    <aura:handler name="change" value="{!v.childShowFilterBlock}" action="{!c.showFilterBlockBasedOnPreviousLogin}"/>
+    
+    <lightning:button label="Click here to Filter" Name="reqFilter" variant="Brand" onclick="{!c.showFilterBlock}"/>
+    
+    <div class="slds-col" id="showFilterBlock" style="display:none">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">    
+                <lightning:select aura:id='fId' name="Name" label="Select the field Name" value="{!v.fieldName}" required="true">
+                    <option value="choose one...">choose one...</option>
+                    <option value="Id">Id</option>
+                    <option value="Name">Name</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col">
+                <lightning:select name="condition" label="based on the condition" value="{!v.condition}" required="true">
+                    <option value="choose one...">choose one...</option>
+                    <option value="Equal to">Equal to</option>
+                    <option value="Not Equal to">Not Equal to</option>
+                    <option value="Contains">Contains</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col">
+                <lightning:input aura:id='inputId' type="text" label="value" value="{!v.inputValue}"/>
+            </div>
+            <div class="slds-col slds-p-top_large">
+                <lightning:button label="Filter" Name="Filter" variant="Brand" onclick="{!c.sendFilterValues}"/>
+            </div>
+        </div>
+    </div>     
+    
+    <hr/>
+    
+</aura:component>

@@ -1,0 +1,8 @@
+<design:component>
+    <!--
+    <design:attribute label='Page Header' name='pageHeader' Description='Give your page heading here'/>
+	OR -->
+    <design:attribute name='pageHeader' label='Page Header' 
+                      Description='Please select corresponding registraion form based on your gender'
+                      datasource='Girl Registraion Form, Boys Registration Form'/>
+</design:component>

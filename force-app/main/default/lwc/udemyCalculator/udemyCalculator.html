@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <lightning-input label='FirstNumber' onchange={getNumber}></lightning-input>
+        <lightning-input label='SecondNumber' onchange={getNumber}></lightning-input>
+        <br/>
+        <lightning-button label='Calculate' onclick={calculate} ></lightning-button>
+        <br/>
+        {FirstNumber}
+        {SecondNumber}
+  
+        Result is : {result}
+    </lightning-card>
+
+
+    <lightning-card> </lightning-card>
+</template>

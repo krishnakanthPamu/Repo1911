@@ -1,0 +1,21 @@
+<apex:page controller="TestCustomControllerClass" >
+    <apex:form >
+        <apex:pageblock title="Test Custom Controller Page Block">
+            <apex:pageBlockSection title="Section 1" columns="2">
+                
+                <apex:outputLabel >Enter First Name: </apex:outputLabel>
+                <apex:inputText value="{!FirstName}"/>
+                <apex:outputLabel >Enter Last Name: </apex:outputLabel>
+                <apex:inputText value="{!LastName}"/>
+                
+                <apex:commandButton action="{!DisplayFirstName}" value="Click here for First Name" />
+                <apex:outputLabel > {!FirstNameMessage} </apex:outputLabel>
+               
+                <apex:commandButton action="{!DisplayFullName}" value="Click here for Full Name" /> 
+                <apex:outputLabel > {!FullNameMessage} </apex:outputLabel>
+         <!--- comment ---->  
+            
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

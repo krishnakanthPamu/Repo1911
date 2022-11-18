@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+<aura:attribute name='NoOfHours' type='string[]' default="hi, how, when"/>        
+        <lightning:Select label='Number of hours...?' name='Hours' >
+            <aura:iteration items="{!v.NoOfHours}" var="{!temp1}">
+                <option value="{!temp1}" text="{!temp1}"/>
+            </aura:iteration>
+        </lightning:Select>
+</aura:component>

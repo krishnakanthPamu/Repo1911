@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="header" type="aura.component[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    message: {!v.body}
+    
+    
+</aura:component>

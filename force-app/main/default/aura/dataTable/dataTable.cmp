@@ -1,0 +1,11 @@
+<aura:component>
+    <aura:attribute name="acctsList" type="account[]"/> 
+    <aura:attribute name="mycolumns" type="List" /> 
+    
+    <lightning:datatable data="{!v.acctsList}"
+                         columns="{!v.mycolumns }"
+                         keyField="id"
+                         hideCheckboxColumn="true"
+                         onrowaction="{!c.editAcc}"/>
+    
+</aura:component>

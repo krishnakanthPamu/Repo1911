@@ -1,0 +1,10 @@
+<!-- Add this component to an account record Lightning page -->
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="fields" type="string[]" default="['Name','AccountNumber','Site','Phone','Website']" />
+    <lightning:card title="Display, Create, or Edit Records">
+        <lightning:recordForm recordId="{!v.recordId}"
+                              objectApiName="Account"
+                              fields="{!v.fields}" />
+    </lightning:card>
+</aura:component>

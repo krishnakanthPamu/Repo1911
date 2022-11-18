@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:registerEvent name="AppContainerEvent" type="c:AppContainerEvent"/>
+    <lightning:input aura:id="Text1" label="Please enter the text to show here..." value="Great...! You implemented the Application Event" />
+    <lightning:button name="fireButton" label="Click here to fire the application event" onclick="{!c.myAction1}"/>
+    
+</aura:component>

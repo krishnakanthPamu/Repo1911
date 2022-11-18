@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Salary_Expected__c</field>
+        <formula>123456</formula>
+    </fieldOverrides>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <standardLabel>Update</standardLabel>
+    <successMessage>Congratulations...! You have created an application form using Object specific Quick Action.</successMessage>
+    <type>Update</type>
+</QuickAction>

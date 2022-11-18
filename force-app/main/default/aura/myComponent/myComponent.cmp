@@ -1,0 +1,12 @@
+<aura:component>
+    
+    
+    <aura:attribute name="var1" type="string"/>
+    
+    <lightning:button aura:id='localId' name='button1' label='Save' onclick='{!c.save}'/>
+
+    <ul>
+        <li class='red'> I am Red in color </li>
+        <li class='green'> I in green color </li>
+    </ul>
+</aura:component>

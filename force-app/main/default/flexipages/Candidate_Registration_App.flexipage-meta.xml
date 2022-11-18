@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>pageHeader</name>
+                    <value>Boys Registration Form</value>
+                </componentInstanceProperties>
+                <componentName>CandidateRegistrationForm</componentName>
+                <identifier>CandidateRegistrationForm</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>pageHeader</name>
+                    <value>Girl Registraion Form</value>
+                </componentInstanceProperties>
+                <componentName>CandidateRegistrationForm</componentName>
+                <identifier>CandidateRegistrationForm2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Candidate Registration App</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

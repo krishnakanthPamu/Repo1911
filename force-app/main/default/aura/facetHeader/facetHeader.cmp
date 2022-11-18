@@ -1,0 +1,8 @@
+<aura:component>
+    
+
+    <aura:attribute name="MarkupDetail" type="Aura.Component[]">
+        <p>Aura.Component[] default value</p>
+    </aura:attribute>
+    
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Show Accounts with Filter" > 
+
+	<aura:attribute type="string" name="fieldName"/>
+    <aura:attribute type="string" name="condition"/>
+    <aura:attribute type="string" name="inputValue"/>
+</aura:event>

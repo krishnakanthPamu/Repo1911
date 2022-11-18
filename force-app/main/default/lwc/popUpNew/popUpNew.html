@@ -1,0 +1,23 @@
+<template>
+		<template if:true={showChildModal}>
+				<lightning-card>
+
+						<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+								<div class="slds-modal__container">
+										<button class="slds-button slds-button_icon slds-modal__close slds-	-inverse" title="Close" onclick = {closeModal}>
+												<lightning-icon icon-name = 'utility:close' alternative-text = 'Close' size="small" variant="inverse"></lightning-icon>
+										</button>
+										<lightning-modal-header label="My Modal Heading">
+										</lightning-modal-header>
+
+										<lightning-modal-body> Content: {content} </lightning-modal-body>
+										<lightning-modal-footer>
+												<lightning-button label="OK" onclick={handleOkay}></lightning-button>
+										</lightning-modal-footer>
+								</div>
+						</section>
+
+						<div class='slds-backdrop slds-backdrop_open'> </div>
+				</lightning-card>
+		</template>
+</template>

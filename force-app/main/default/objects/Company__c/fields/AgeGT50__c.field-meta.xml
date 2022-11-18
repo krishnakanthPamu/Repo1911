@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AgeGT50__c</fullName>
+    <externalId>false</externalId>
+    <label>AgeGT50</label>
+    <summaryFilterItems>
+        <field>Worker__c.Age__c</field>
+        <operation>greaterThan</operation>
+        <value>50</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Worker__c.Company__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

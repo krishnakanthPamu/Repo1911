@@ -1,0 +1,12 @@
+<aura:component >
+	<p>
+    	This text is from state component...!
+    </p>
+    
+    <aura:handler name="LPregisteredEvent" event="c:testComponentEvent" action="{!c.LPhandleFunction}" phase="bubble" />
+    <aura:handler name="MPregisteredEvent" event="c:testComponentEvent" action="{!c.MPhandleFunction}" phase="bubble"/>
+    <aura:handler name="HPregisteredEvent" event="c:testComponentEvent" action="{!c.HPhandleFunction}" phase="bubble"/>
+    
+    <c:Township1Component/>
+
+</aura:component>

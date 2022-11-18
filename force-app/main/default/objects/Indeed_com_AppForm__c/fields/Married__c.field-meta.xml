@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Married__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Reference: Mail dated Jan 1st 2020 from client Larey.
+or 
+Task number: 24243</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select married or unmarried.</inlineHelpText>
+    <label>Married</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

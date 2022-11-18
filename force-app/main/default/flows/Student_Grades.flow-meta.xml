@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <description>Record Creation in Students Objects based on Student Marks.</description>
+        <name>Decision_Taking</name>
+        <label>Decision Taking</label>
+        <locationX>331</locationX>
+        <locationY>217</locationY>
+        <defaultConnector>
+            <targetReference>Default_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>GT_74</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Student_Marks</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>74.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Record_in_Student_Object</targetReference>
+            </connector>
+            <label>GTE 74</label>
+        </rules>
+        <rules>
+            <name>LT_74</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Student_Marks</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>74.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Student_Marks</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>10.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LT_74_Screen</targetReference>
+            </connector>
+            <label>LT 74 and Gt 10</label>
+        </rules>
+    </decisions>
+    <description>Student Grades Calculation</description>
+    <interviewLabel>Student Grades {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Student Grades</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Create Record in Student Object if Student Marks greater than or equal to 74.</description>
+        <name>Create_Record_in_Student_Object</name>
+        <label>Create Record in Student Object</label>
+        <locationX>197</locationX>
+        <locationY>409</locationY>
+        <assignRecordIdToReference>Student_Record_Id</assignRecordIdToReference>
+        <connector>
+            <targetReference>Congratulation_Screen</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Marks__c</field>
+            <value>
+                <elementReference>Student_Marks</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Student_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Student__c</object>
+    </recordCreates>
+    <screens>
+        <description>Congrats Screen</description>
+        <name>Congratulation_Screen</name>
+        <label>Congratulation Screen</label>
+        <locationX>203</locationX>
+        <locationY>555</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Congratulations_Screen</name>
+            <fieldText>&lt;p&gt;Congratulations {!Student_Name}... You have more than 74 marks..  Which is {!Student_Marks}...&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Your Roll Number will be {!Student_Record_Id}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thanks,&lt;/p&gt;&lt;p&gt;School Management&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Default_Screen</name>
+        <label>Default Screen</label>
+        <locationX>514</locationX>
+        <locationY>425</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Default_Screen_Display_Text</name>
+            <fieldText>&lt;p&gt;You have not entered any Student Details..&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LT_74_Screen</name>
+        <label>LT 74 Screen</label>
+        <locationX>346</locationX>
+        <locationY>414</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>No_Records_Creation</name>
+            <fieldText>&lt;p&gt;Sorry.. We are not accepting the Student who has less than 74 Marks..&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Student_Data_Entry</name>
+        <label>Student Data Entry</label>
+        <locationX>340</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Decision_Taking</targetReference>
+        </connector>
+        <fields>
+            <name>Student_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Student Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Student_Marks</name>
+            <dataType>Number</dataType>
+            <fieldText>Student Marks</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Welcome_Screen</name>
+        <label>Welcome Screen</label>
+        <locationX>180</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Student_Data_Entry</targetReference>
+        </connector>
+        <fields>
+            <name>Student_Entry_Welcome_Screen</name>
+            <fieldText>&lt;p&gt;Hi...&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Welcome to the Student Entry System..&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Welcome_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>Record_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Record_Id2</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Student_Record_Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

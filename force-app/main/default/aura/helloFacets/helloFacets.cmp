@@ -1,0 +1,12 @@
+<aura:component>
+    ------1------------
+    <c:facetHeader>
+        <!--we are not setting MarkupDetail attribute value so this will display 
+  default body specified in MarkupDetail attribute--> 
+    </c:facetHeader>
+    
+    
+    
+    
+    
+</aura:component>

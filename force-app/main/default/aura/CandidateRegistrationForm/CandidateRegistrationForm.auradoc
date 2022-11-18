@@ -1,0 +1,12 @@
+<aura:documentation>
+	<aura:description>this is from description tag of Candidate Registration Form	</aura:description>
+	<aura:example name="Name:CandidateRegistrationForm" ref="c:CandidateRegistrationFormContoller" label="Label:Registration Form">
+		This is from registration form example tag...
+	</aura:example>
+    
+    
+    <aura:example name="Welcome lightning component" ref="c:Welcome_to_Lightning" label="Label:WelcomeToLightning">
+        This is from welcome lightning component...
+    
+    </aura:example>
+</aura:documentation>

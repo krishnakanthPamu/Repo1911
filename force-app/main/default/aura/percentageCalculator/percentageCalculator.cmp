@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name='n1' type='integer' access='public' />
+    <aura:attribute name='n2' type='integer' access='public' />
+    
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-3 ">
+            <div class="slds-var-p-around_medium">
+                <lightning:input name='number1' type='number' label='Enter the number' value='{!v.n1}'/>
+                <lightning:input name='number2' type='number' label='Enter the percentage' value='{!v.n2}'
+                                    formatter='currency'/>
+            </div>
+        </div>
+    </div>
+    
+     <br/>
+    
+    ternary Operator check: "{!v.n1 == '10' ? 20 : 50 }"
+    
+    
+    Percenatge is: {!div(mult(v.n1 , v.n2),100)}
+    
+    
+    
+    
+</aura:component>

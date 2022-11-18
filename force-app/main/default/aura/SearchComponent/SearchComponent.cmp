@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableforrecordhome"
+                access="global">
+    <aura:attribute name="issearching" type="Boolean" default="false"/>
+    <aura:attribute name="searchText" type="string" />
+    <aura:registerEvent name="searchComponent" type="c:searchEvent" />
+    
+    <div>
+        <lightning:input
+                         aura:id="enter-search"
+                         name="searchKey"
+                         value="{!v.searchText}"
+                         label="Search when user hits the 'enter' key"
+                         isLoading="{! v.issearching }"
+                         type="search"
+                         placeholder="Enter the Beer name which you want to search for... :) "
+                         onchange="{!c.doSearch}"
+         />
+    </div>
+</aura:component>

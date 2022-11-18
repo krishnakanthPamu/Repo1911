@@ -1,0 +1,26 @@
+<apex:page controller="TestVFP2Class">
+    <apex:form >
+        <apex:pageBlock title="Name with Reset">
+            <apex:pageBlockButtons >
+                <!---<apex:commandButton value = 'Click here to Reset the both Fields' action = "{!resetMethod}" reRender = "id1,id2"/> --->
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Section 1" columns="2">
+  
+                <apex:outputLabel > Enter First Name: </apex:outputLabel>
+                <apex:inputText value="{!FirstName}"/>
+                
+                <apex:outputLabel > Enter the last Name: </apex:outputLabel>
+                <apex:inputText value="{!LastName}"/>
+                
+                <apex:commandButton value="Click here for full name" action="{!showFullName}" reRender="id1" />
+                <apex:outputLabel id="id1"> {!FullName} </apex:outputLabel>
+                
+                <apex:commandButton value="Click here to get automatic generated Email " action="{!showEmailName}" reRender="id2" />
+                <apex:outputLabel id="id2"> {!EmailName}</apex:outputLabel>
+                
+               <apex:commandButton value="Click here to Reset the both Fields" action="{!resetMethod}" reRender="id1,id2"/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

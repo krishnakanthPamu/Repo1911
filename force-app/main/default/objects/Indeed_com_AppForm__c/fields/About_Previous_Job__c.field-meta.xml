@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>About_Previous_Job__c</fullName>
+    <description>Reference: Mail dated 01/01/2020 from client Larey.
+or
+Task Number: 24243</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please describe about the previous job you worked for.</inlineHelpText>
+    <label>About Previous Job</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

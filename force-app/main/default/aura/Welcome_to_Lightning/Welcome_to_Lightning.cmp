@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute Name="displayText" Type="String" Default="Text1"/>
+	
+    <div>
+    	<p>
+        	Hi.. This text is from Component Mark up.
+            {!v.displayText}
+        </p>
+    </div>
+    
+</aura:component>

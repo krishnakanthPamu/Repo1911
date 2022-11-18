@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title='Meeting Rooms'>
+        <ul>
+            <template for:each={meetingRooms} for:item="room">
+                <li key={room.roomName} style="padding: 10px;">
+                    <c-u-meeting-room meeting-room-info={room} show-meeting-room ></c-u-meeting-room>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>

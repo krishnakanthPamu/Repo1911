@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_on_Salary</fullName>
+    <active>false</active>
+    <description>If experience is more than 0 then salary expected should not be 0 and if exp is 0 then salary should be 0.</description>
+    <errorConditionFormula>IF(  Experience__c &gt; 0, Salary_Expected__c = 0, Salary_Expected__c  &lt;&gt;  0)</errorConditionFormula>
+    <errorDisplayField>Salary_Expected__c</errorDisplayField>
+    <errorMessage>If experience is more than 0 then salary expected should not be 0 and if exp is 0 then salary should be 0.</errorMessage>
+</ValidationRule>

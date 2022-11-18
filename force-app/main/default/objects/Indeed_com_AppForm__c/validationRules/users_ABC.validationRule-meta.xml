@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>users_ABC</fullName>
+    <active>false</active>
+    <description>NOT ( ISBLANK(User__r.Id) || ISBLANK(User__r.Id) ) ,</description>
+    <errorConditionFormula>AND(
+   
+    ($User.Id &lt;&gt;  User__r.Id), ($User.Id &lt;&gt; User2__r.Id )
+
+)</errorConditionFormula>
+    <errorMessage>Owner is not assigned to either User 1 or User2 on the detail page.</errorMessage>
+</ValidationRule>

@@ -34,7 +34,7 @@
     showFilterBlockBasedOnPreviousLogin : function(component, event, helper) {
         
         //debugger;
-        console.log('in AccountsFilterComponentController showFilterBlockBasedOnPreviousLogin');      
+        console.log('in AccountsFilterComponentController showFilterBlockBasedOnPreviousLogin test');      
 
         var showFilterBlock = component.get("v.childShowFilterBlock");
         //alert('boolean '+ showFilterBlock);

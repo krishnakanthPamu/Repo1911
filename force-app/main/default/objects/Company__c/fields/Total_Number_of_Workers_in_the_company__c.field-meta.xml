@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Number_of_Workers_in_the_company__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Number of Workers in the company</label>
+    <summaryForeignKey>Worker__c.Company__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

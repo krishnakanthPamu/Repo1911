@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global" >
+
+  
+    <div class="slds-box">
+    	<b>Current Record Id is: {!v.recordId}</b>
+    </div>
+    
+    <aura:handler name="init" action="{!c.myInit}" value="{!this}" />
+    
+    <aura:attribute name='list1' type='list' default="['a','d','g','f']"/>
+    
+    <aura:iteration items="{!v.list1}" var='temp' indexVar='i'>
+    	{!temp} {!i}
+        <br/>
+    </aura:iteration>
+</aura:component>

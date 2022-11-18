@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name='colors' type='map' default="{}"/>
+ 
+    <lightning:button label='showNubmers' onclick='{!c.showColors}' />
+    a: {!v.colors.a} <br/>
+    {!v.colors.b} <br/>
+    {!v.colors.c} <br/>
+</aura:component>

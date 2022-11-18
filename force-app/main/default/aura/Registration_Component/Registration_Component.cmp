@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <!--display String on the page-->
+    <aura:attribute name="StudentName" type="String" default=''/>
+    <lightning:input label="Enter your Name:" name="StName" value="{!v.StudentName}"/>
+    
+    
+    <!--Showing Picklist on the Page-->
+    <Lightning:select label="Choose any number?" name="Number1">
+        <Option>1</Option>
+        <Option>2</Option>
+        <Option>3</Option>
+        <Option>4</Option>
+    </Lightning:select>
+    
+    <!--PICKLIST 2-->
+	<lightning:select label='which number you like ?' name='colorName'>
+    	<option value='red'> 1 </option>
+        <option value='yellow'> 2 </option>
+    </lightning:select>
+    
+    
+    <!--PICKLIST 3-->
+    <aura:attribute name="noOfHoursYouStudy" type="string[]" default="Less than 1 Hour, Less than 2 Hours"/>
+    
+	<Lightning:select label="How many hours you study daily..?" name="noOfHoursStudies">
+	<option var='a'></option>
+    </Lightning:select>
+    
+    
+    
+</aura:component>

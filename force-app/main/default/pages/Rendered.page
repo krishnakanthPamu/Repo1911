@@ -1,0 +1,24 @@
+<apex:page controller="renderedClass" action="{!ShowContacts}">
+	<apex:form >
+    	<apex:pageBlock title="Page Block Title" >
+            
+
+        	<apex:pageBlockSection title="Section Title" rendered="{!if(2==2, True, False)}">
+                <apex:outputLabel > Enter Your First Name: </apex:outputLabel>
+            	<apex:inputText Value="{!FirstName}"/>
+                <apex:outputLabel > Enter Your Last Name: </apex:outputLabel>
+                <apex:inputText value="{!LastName}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockTable title="Table Section" value="{!ContactList}" var="c" id="Table" rendered="{! if(contactList.size>0, true, false)}">
+        
+                  	<apex:column value="{!c.Name}" rendered="{! if(c.Name=="Test", True, False)}"/>
+                	<apex:column value="{!c.Phone}" />
+               
+                
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+
+    </apex:form>    
+</apex:page>

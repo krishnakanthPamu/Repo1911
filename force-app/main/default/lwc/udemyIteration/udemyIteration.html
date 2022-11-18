@@ -1,0 +1,14 @@
+<template>
+    <lightning-card style="border: 2px dotted">
+        <b> List of Cities in India Using for:each</b>
+        <template for:each ={cityList} for:item="city">
+            <p key={city}> {city}</p>
+        </template>
+        
+        <br/>
+        <b> List of Cities in India using iteratior:it</b>
+        <template iterator:it={cityList}>
+            <p key={it.value}> {it.value} </p>
+        </template>
+    </lightning-card>
+</template>

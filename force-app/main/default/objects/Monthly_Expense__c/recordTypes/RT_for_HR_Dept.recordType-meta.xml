@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_for_HR_Dept</fullName>
+    <active>true</active>
+    <description>Record Type for HR Dept</description>
+    <label>RT for HR Dept</label>
+    <picklistValues>
+        <picklist>Expense_Type__c</picklist>
+        <values>
+            <fullName>Joining Bonus</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Recruitment Allowances</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

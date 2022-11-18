@@ -1,0 +1,65 @@
+<aura:component controller='addCandidateDetails' implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                											access="global" >
+
+    <aura:attribute name='pageHeader' type='string' default='Candidate Registration Form'/>
+    <aura:attribute type='string' name='sectionName' default='Basic Details'/>
+    <aura:attribute name='studentName' type='string' default='test'/>
+    <aura:attribute name='NoOfHours' type='string[]' default=' , GT 1 Hour, GT 2 Hour, GT 3 Hour'/>
+    <aura:attribute name='weekendsAttend' type='boolean' default='false'/>
+    <aura:attribute type='list' name='educationalDetailsList' default="[]" />
+    <aura:attribute type='Candidate_Detail__c' name='candidateDetails' default="{'sObjectType':'Candidate_Detail__c'}"/>
+    <aura:attribute type='string' name="parentId"/>
+    
+    <div class='slds-align_absolute-center'> <!--Alignment-->
+    	<div class='slds-page-header'> <!-- Only makes as Header -->
+            <div class="slds-text-heading_medium"> <!-- Changes the headings size-->
+                <b> {!v.pageHeader} </b>
+            </div>
+        </div>
+	</div>
+	<br/>
+   
+	<div class= 'slds-size--3-of-8'>
+        <div class="myRegistrationFormStyle1"> 
+        	<b> {!v.sectionName} </b> 
+    	</div>
+        	
+        <Lightning:input type='string' label='Enter your name' name='NameOfTheStudent' value='{!v.candidateDetails.Name}'/>
+        <lightning:Select label='Number of hours...?' name='Hours' value='{!v.candidateDetails.Number_of_hours__c}'>
+			<!--<option value='red'> 1 </option>
+		        <option value='red2'> 2</option>
+              -->
+			<aura:iteration items="{!v.NoOfHours}" var='temp1'>
+				<option value="{!temp1}"  text='{!temp1}' />
+			</aura:iteration>
+		</lightning:Select>
+        <br/>
+
+<!--Calling "Education Form" Component-->
+        <hr/>
+        <aura:iteration items='{!v.educationalDetailsList}' var='temp' indexVar='index'>
+			<div>
+            <c:sObject_EducationDetails parentIdChild="{!v.parentId}" educationDetailsComponentList='{!v.educationalDetailsList}' indexNo='{!index}'/>
+			<hr/>
+			</div>
+		</aura:iteration>
+        
+        <lightning:button iconName='utility:add' variant='border-filled' label='Add Education Details' 
+                          onclick='{!c.showEducationFunction}'/>
+        <hr/>
+
+        <lightning:input aura:id='checkboxId1' type='checkbox' onchange='{!c.myCheckboxAction}' 
+                         label='Are you ready to attend on weekends...?' name='weekendsCheckbox' 
+						 value='{!v.candidateDetails.Are_you_ready_to_attend_on_weekends__c}'/>   
+		           
+        <aura:if isTrue="{!v.weekendsAttend}"> 
+			<br/>
+		    Great...! You are eligible for weekend classes...!
+	        <br/>
+        </aura:if>
+        
+        <br/>
+        <lightning:button onclick='{!c.submitFunction}'> Submit </lightning:button>
+        <br/>
+    </div>
+</aura:component>

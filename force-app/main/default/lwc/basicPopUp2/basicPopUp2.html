@@ -1,0 +1,43 @@
+<template>
+		<lightning-card>
+				<header style="font-size:15px"> Basic Way to Show Popup/Modal</header></br>
+				<!-- lightning button for open modal window -->
+				<lightning-button variant="brand"
+													label="Show Popup"
+													title="title of the popup"
+													onclick={openModal}
+													class="slds-m-left_x-small"></lightning-button>
+
+				<!--Use template if:true to display/hide popup based on isModalOpen value--> 
+				<template if:true = {isModalOpen}>
+						<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+								<div class="slds-modal__container">
+										<!-- Modal/Popup Box LWC header here -->
+										<header class="slds-modal__header">
+												<button class="slds-button slds-button_icon slds-modal__close slds-	-inverse" title="Close" onclick = {closeModal}>
+														<lightning-icon icon-name = 'utility:close' alternative-text = 'Close' size="small" variant="inverse"></lightning-icon>
+												</button>
+
+												<h2 id="modal-heading-01" class="slds-tex	t-heading_medium slds-hyphenate">Modal/PopUp Box header LWC</h2>
+										</header>
+
+										<!-- Modal/Popup Box LWC body starts here -->
+										<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+												<p>
+														Pop-Up Box Content will be showed here.
+												</p>
+										</div>
+
+										<!-- Modal/Popup Box LWC footer starts here -->
+										<div class="slds-modal__footer">
+												<button  class="slds-button slds-button_neutral" onclick={submitModal} label='OK' > OK </button>
+												<button class="slds-button slds-button_brand" onclick={closeModal} label='Cancel' > CANCEL </button>
+												<!-- 										<lightning-button onclick={closeModal} label='new cancel' variant="brand"></lightning-button> -->
+												<!-- 										"button" and "l-button" both are working same -->
+										</div>
+								</div>
+						</section>
+						<div class='slds-backdrop slds-backdrop_open'> </div>
+				</template>
+		</lightning-card>
+</template>

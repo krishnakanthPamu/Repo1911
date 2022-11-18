@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>krishnakanth.pamu@gmail.com</contactEmail>
+    <label>kpamu Source Connect App</label>
+    <oauthConfig>
+        <callbackUrl>https://krishnakanth-pamusource-dev-ed.my.salesforce.com/services/authcallback/kpamu_Auth_Provider</callbackUrl>
+        <consumerKey>3MVG9YDQS5WtC11obcmd8wuUs4DoXwtw13PgEP42zxizMl.8wZurghGoiFX3l7wAETD6SC4M.cp_fa.UXpeaO</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

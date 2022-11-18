@@ -1,0 +1,9 @@
+<aura:component implements = "lightning:isUrlAddressable,force:appHostable,flexipage:availableForAllPageTypes">
+   
+    <aura:handler name='init' value='{!this}' action='{!c.init}' />
+    <aura:attribute name="fName" type="string" />
+    <aura:attribute name="lName" type="string" />
+    <aura:attribute name='whiteSpace' type='string' default=' '/>
+    
+     My Name is {!v.fName}  {!v.whiteSpace} {!v.lName}
+</aura:component>

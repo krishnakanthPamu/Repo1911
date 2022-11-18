@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>krishnakanth.pamu@gmail.com</contactEmail>
+    <contactPhone>1234567890</contactPhone>
+    <label>Indeedcom</label>
+    <oauthConfig>
+        <callbackUrl>https://</callbackUrl>
+        <consumerKey>3MVG9YDQS5WtC11obcmd8wuUs4JmURoSRSb9Ij.jciITKyHbu4EjIj3f7StBTdkKF2kkKE3UNWacFEoysVp42</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

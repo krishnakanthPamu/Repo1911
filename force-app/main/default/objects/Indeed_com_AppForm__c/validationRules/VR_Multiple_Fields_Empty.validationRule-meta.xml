@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Multiple_Fields_Empty</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR
+(
+ISBLANK(TEXT(Country__c)),
+ISBLANK(TEXT(City__c)),
+ISBLANK(TEXT(Preferred_Country__c))
+)</errorConditionFormula>
+    <errorMessage>Country or City or Preferred Country should not blank.</errorMessage>
+</ValidationRule>

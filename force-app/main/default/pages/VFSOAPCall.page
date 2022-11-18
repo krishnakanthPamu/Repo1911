@@ -1,0 +1,14 @@
+<apex:page controller="VFSoapController" tabStyle="Account">
+    <apex:form >
+        <apex:outputtext style="color:Green;font-size:20px;font-weight:bold;" value="{!statusMsg}"> </apex:outputtext>
+        <apex:pageBlock title="SOAP Call" >
+            <apex:pageblocksection title="Insert Account">
+                <apex:outputLabel > Enter the Name </apex:outputLabel>
+                <apex:inputtext value="{!NameVar}"/>
+                <apex:outputLabel >Enter the City</apex:outputLabel>
+                <apex:inputtext value="{!cityVar }"/>
+            </apex:pageblocksection>
+        </apex:pageBlock>
+        <apex:commandButton value="Click here to insert the record in the Source System" action="{!makeSOAPCall}"/>
+    </apex:form>
+</apex:page>

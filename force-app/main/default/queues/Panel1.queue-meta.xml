@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Panel1</name>
+    <queueMembers>
+        <users>
+            <user>adaniels@pamuyellow.com</user>
+            <user>gopinathreddy.venna@gmail.com</user>
+            <user>integration@00d6f000002vd3cuac.com</user>
+            <user>krishnakanth.pamu@gmail.com</user>
+            <user>nlarkin@pamupurple.com</user>
+            <user>insightssecurity@00d6f000002vd3cuac.com</user>
+            <user>jsmithtgp1@acme.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Test__c</sobjectType>
+    </queueSobject>
+</Queue>

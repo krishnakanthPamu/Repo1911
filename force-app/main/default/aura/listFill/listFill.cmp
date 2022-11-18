@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name='numbers' type='list' default="[]"/>
+    <lightning:button label='showNubmers' onclick='{!c.showNumbers}' />
+    <aura:iteration var="num" items="{!v.numbers}">
+        {!num.value} <br/>
+    </aura:iteration>
+	
+</aura:component>

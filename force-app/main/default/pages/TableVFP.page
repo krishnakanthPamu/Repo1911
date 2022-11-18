@@ -1,0 +1,16 @@
+<apex:page controller="TableVFP2Class1">
+    <apex:form >
+        <apex:pageBlock title="Contact Page Block">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Click here to show the 10 contacts" action="{!showContacts}" reRender="Table"/>
+            </apex:pageBlockButtons>                
+                
+            <apex:pageBlockTable value="{!ContactsList}" var="Contact1" id="Table">
+                <apex:column value="{!Contact1.Name}" />
+                <apex:column value="{!Contact1.Phone}"/>
+                <apex:column value="{!Contact1.Id}"/>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

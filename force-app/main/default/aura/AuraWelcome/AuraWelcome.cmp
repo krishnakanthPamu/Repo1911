@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+   <h1 class='red'> Aura Component </h1>
+			<p style='background-color:red; color:white'> SFDC Panther</p>
+    <div class=" green slds-var-p-around_medium">
+        Welcome
+    </div>
+				<span class="blue slds-var-p-around_medium">
+									You can easily achieve it...
+				</span>
+</aura:component>

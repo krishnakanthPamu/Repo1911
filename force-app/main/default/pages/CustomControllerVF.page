@@ -1,0 +1,35 @@
+<apex:page controller="customController1" tabStyle="Account" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Accounts Search based on City" columns="2" rendered="{!if (10>5, true,false)}">
+                <apex:outputLabel >Enter your First Name: </apex:outputLabel>
+                <apex:inputtext value="{!firstName}"/>
+                
+                <apex:outputLabel >Enter Last Name: </apex:outputLabel>
+                <apex:inputtext value="{!lastName}"/>
+                
+                <apex:outputLabel >Full Name is: </apex:outputLabel>
+                <apex:outputLabel id="id1">{!fullName}</apex:outputLabel>
+                
+                
+                <apex:commandButton value="Show the Full name" action="{!showFullname}" rerender="id1"/>
+                <apex:commandButton value="reset the name fields" action="{!resetFields}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>    
+        
+        <apex:pageBlock title="Accounts List" >
+           
+           <apex:pageBlockButtons >
+                <apex:commandButton value="Show accounts" action="{!showTable}" rerender="id2"/>
+           </apex:pageBlockButtons> 
+           
+            <apex:pageBlockTable value="{!aList}" var="Accounts" id="id2" rendered="{!if(aList.size<>0,  true, false)}">
+                <apex:column value="{!Accounts.Id}"/>
+                <apex:column value="{!Accounts.Name}"/>
+            </apex:pageBlockTable>
+
+
+           
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

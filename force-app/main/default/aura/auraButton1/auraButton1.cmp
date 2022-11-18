@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name='whichButton' type="string" />
+	<p> You clicked the button {!v.whichButton}</p>
+
+    <lightning:button aura:id='button1' name='b1' label="button1" onclick="{!c.nameThatButton}" />
+	<lightning:button aura:id='button2' label="button2" onclick="{!c.nameThatButton}" />
+</aura:component>

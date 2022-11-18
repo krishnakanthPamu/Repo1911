@@ -1,0 +1,26 @@
+<aura:component controller="addCandidateDetails" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type='string' name='educationSection' default='Education Details'/>
+    <aura:attribute type='string' name='collegeName' default=''/>
+    <aura:attribute type='string' name='branchName' default=''/>
+    <aura:attribute type='string' name='collegePercentage' default=''/>
+    <aura:attribute type='list' name='educationDetailsComponentList' default='[]'/>
+    <aura:attribute type='integer' name='indexNo'/>
+    <aura:attribute type='integer' name='sequenceNo'/>
+    <aura:attribute type='string' name='parentIdChild'/>
+    <aura:attribute type='Education_Detail__c' name='eduDetails' default="{'sObjectType':'Education_Detail__c'}"/>
+    
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}'/>
+    <aura:handler name='change' value='{!v.indexNo}' action='{!c.doChangeFunction}'/>
+    <aura:handler name='change' value='{!v.parentIdChild}' action='{!c.saveEducationDetails}'/>
+    <div>
+       	<b> {!v.educationSection}:{!v.sequenceNo} </b> 
+    </div>
+    
+	<lightning:input type='string' label='Your College Name:' name='yourCollegeName' value='{!v.eduDetails.College_Name__c}'/>
+    <lightning:input type='string' label='Your Branch:' name='yourBranch' value='{!v.eduDetails.Branch_Name__c}'/>
+    <lightning:input type='string' label='Your Percentage:' name='yourPercentage' value='{!v.eduDetails.Percentage__c}'/>
+    <lightning:button iconName='utility:delete' variant='border-filled' label='Delete Education Details'
+                      onclick='{!c.deleteEducationDetails}'/>
+    
+    {!v.eduDetails.College_Name__c}
+</aura:component>

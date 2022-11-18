@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HR_Record_type1</fullName>
+    <active>true</active>
+    <label>HR Record type1</label>
+    <picklistValues>
+        <picklist>expense_type__c</picklist>
+        <values>
+            <fullName>Tax HR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

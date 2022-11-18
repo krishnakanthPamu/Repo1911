@@ -1,0 +1,5 @@
+<aura:component controller='SimpleServerSideController' >
+    <aura:method name='echo'>
+        <aura:attribute name='callback' type='Function'/>
+    </aura:method>
+</aura:component>

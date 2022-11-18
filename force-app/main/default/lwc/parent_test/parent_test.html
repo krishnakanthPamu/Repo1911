@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="COMPONETS CALLING">
+       Hello{myvar}<br/>
+       <lightning-button label="ChangeName" onclick={changename}></lightning-button><br/>
+       <c-inner_chaild training-name={train}></c-inner_chaild><br/>
+       <lightning-button label="change child" onclick={changevar}></lightning-button><br/>
+       <lightning-button label="callchild" onclick={callchild}></lightning-button><br/>
+    </lightning-card>
+</template>

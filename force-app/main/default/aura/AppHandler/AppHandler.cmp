@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" 
+                access="global" >
+    <aura:handler event="c:AppContainerEvent" action="{!c.myAction1}"/>
+    <aura:attribute name="showMessage" type="string" default="Message will be replaced here...!"/>
+    
+    <hr/>
+    <b>{!v.showMessage}</b>
+</aura:component>

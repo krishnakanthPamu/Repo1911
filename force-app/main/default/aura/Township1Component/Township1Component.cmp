@@ -1,0 +1,19 @@
+<aura:component >
+	<p>
+    	This text is from Township1 component
+    </p>
+    <aura:registerEvent name="LPregisteredEvent" type="c:testComponentEvent"/>
+    <aura:registerEvent Name="MPregisteredEvent" type="c:testComponentEvent"/>
+    <aura:registerEvent name="HPregisteredEvent" type="c:testComponentEvent"/>
+    <aura:handler name="MPregisteredEvent" event="c:testComponentEvent" action="{!c.MPHandlerFucntion}" phase="bubble"/> 
+    <aura:handler name="HPregisteredEvent" event="c:testComponentEvent" action="{!c.HPHandlerFucntion}" phase="bubble"/> 
+      
+    <lightning:button label="Submit Low Priority Complaint" name="makeLPcomplaint" variant="brand" 
+                      onclick="{!c.LPcomplaint}"/>
+    
+    <lightning:button label="Submit Medium Priority Complaint" name="makeMPcomplaint" variant="brand" 
+                      onclick="{!c.MPcomplaint}"/>
+
+    <lightning:button label="Submit High Priority Complaint" name="makeHPcomplaint" variant="brand" 
+                      onclick="{!c.HPcomplaint}"/>    
+</aura:component>

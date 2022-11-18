@@ -1,0 +1,18 @@
+<apex:page StandardController="Account" extensions="ControllerExtension1Class">
+    <apex:form >
+        <apex:pageBlock title="Standard Page Block">
+            <apex:pageBlockSection title="Standard Page Block Section" columns="2">
+                <apex:pageBlockSectionItem >New Account<apex:inputField value="{!Account.Name}" required="False"/></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:commandButton value="Save" action="{!save}"/></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+                <apex:pageBlock title="Custom Page Block">
+            <apex:pageBlockSection title="Custom Page Block Section" columns="2">
+                <apex:pageBlockSectionItem >New Account<apex:inputText value="{!AccountName}" required="False"/></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:commandButton value="Save" action="{!Customsave}"/></apex:pageBlockSectionItem>
+             <!---   <apex:outputLabel id="id1">{!AccountName}</apex:outputLabel> ---->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

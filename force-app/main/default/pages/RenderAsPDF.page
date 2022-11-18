@@ -1,0 +1,10 @@
+<apex:page controller="RenderAsPDFClass" renderAs="PDF" action="{!ShowContacts}">
+    <apex:form >
+        <apex:PageBlock title="Rendered as PDF">
+            <apex:pageBlockTable value="{!ContactsList}" var="C">
+                <apex:column value="{!C.Name}"/>
+                <apex:column value="{!C.Phone}"/>
+            </apex:pageBlockTable>
+        </apex:PageBlock>
+    </apex:form>
+</apex:page>

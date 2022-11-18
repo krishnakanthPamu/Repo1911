@@ -1,0 +1,19 @@
+<aura:component implements='flexipage:availableForAllPageTypes'>
+    <aura:attribute name='pageReference' type='object'/>
+    <aura:attribute name='url' type='string'/>
+    
+    <aura:handler name='init' value="{!this}" action="{!c.init}"/>
+    
+    <lightning:navigation aura:id='navService'/>
+    <lightning:button label="call" onclick="{!c.navigate}"/>
+    <br/>
+    <br/>
+    {!v.url}
+    <br/>
+    <br/>
+    <a href="{!v.url}"> Aura Link to Navigate</a>
+    <br/>
+    <br/>
+    <a href="#" onclick="{!c.navigate}"> Page Reference to Navigate</a>
+    
+</aura:component>

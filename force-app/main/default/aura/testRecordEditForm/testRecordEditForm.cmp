@@ -1,0 +1,22 @@
+<aura:component implements="force:hasRecordId,flexiPage:availableforrecordhome"
+                access="global">
+    
+    <lightning:card title="recordEditForm">
+        <lightning:recordEditForm recordId="{!v.recordId}"
+                                  objectApiName="Account"
+                                  onload="{!c.handleOnLoad}"
+                                  onsuccess="{!v.handleSuccess}"
+                                  onerror="{!v.handleError}"
+                                  >
+            <lightning:messages/>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning:inputField aura:id="fieldName" fieldName="Name" value="My Field Value" />
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning:inputField aura:id="industry" fieldName="Industry"  />
+                </div>
+            </div>
+        </lightning:recordEditForm>
+    </lightning:card>
+</aura:component>

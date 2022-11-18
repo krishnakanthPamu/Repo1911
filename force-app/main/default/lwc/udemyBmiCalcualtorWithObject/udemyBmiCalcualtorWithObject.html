@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <lightning-input label="Weight in Kilograms" type="number" step="0.01" onchange={getWeight}> </lightning-input>
+        <lightning-input label="Height in Meter" type="number" step="0.01" onchange={getHeight}></lightning-input>
+
+        <lightning-button label="Calculate BMI" onclick={calBMI}></lightning-button>
+        <br/>
+        <br/>
+        <div>
+            <template if:true={displayResult}>
+                <div>
+                    
+                    {bmiValue}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

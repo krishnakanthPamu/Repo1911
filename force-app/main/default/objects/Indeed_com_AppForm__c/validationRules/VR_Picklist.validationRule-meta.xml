@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Picklist</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND
+(
+ISPICKVAL(Reason__c, &quot;Other&quot; ),
+ISBLANK( Other__c )
+)</errorConditionFormula>
+    <errorDisplayField>Other__c</errorDisplayField>
+    <errorMessage>It should not be blank if you select &apos;Reasons&apos; field as others.</errorMessage>
+</ValidationRule>

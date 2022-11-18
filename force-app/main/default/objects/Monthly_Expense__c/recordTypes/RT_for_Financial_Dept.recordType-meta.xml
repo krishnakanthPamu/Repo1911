@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_for_Financial_Dept</fullName>
+    <active>true</active>
+    <description>Record Type for Financial Dept</description>
+    <label>RT for Financial Dept</label>
+    <picklistValues>
+        <picklist>Expense_Type__c</picklist>
+        <values>
+            <fullName>Sales Tax</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Service Tax</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

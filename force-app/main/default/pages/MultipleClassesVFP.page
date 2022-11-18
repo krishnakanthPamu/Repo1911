@@ -1,0 +1,14 @@
+<apex:page StandardController="Contact" Extensions="class1,class2,class3">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem > First Name: <apex:inputText value="{!FirstName}"/> </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem > Last Name: <apex:inputText value="{!LastName}" /> </apex:PageBlockSectionItem>
+                <apex:pageBlockSectionItem > <apex:commandButton action="{!showFullName}" value="Click here for Full Name" rerender="id1"/> </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem > <apex:outputLabel id="id1" > {!FullName} </apex:outputLabel> </apex:pageBlockSectionItem>
+                <apex:pageblockSectionItem > <apex:commandButton value="show message" action="{!showMessage}"/></apex:pageblockSectionItem>
+                <apex:pageBlockSectionItem > <apex:outputLabel >{!Message}</apex:outputLabel></apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableforrecordhome"
+                access="global">
+    <c:PageHeader TagLine="Beer Explorer"/>
+    <c:beerListComponent/>
+</aura:component>
