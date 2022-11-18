@@ -39,7 +39,7 @@
         var showFilterBlock = component.get("v.childShowFilterBlock");
         //alert('boolean '+ showFilterBlock);
         if(showFilterBlock == true){
-            console.log('in true block');
+            console.log('in true block'); 
             document.getElementById('showFilterBlock').style.display="block";
         }else{
             console.log('in else block');
