@@ -42,7 +42,7 @@
             console.log('in true block'); 
             document.getElementById('showFilterBlock').style.display="block";
         }else{
-            console.log('in else block test');
+            console.log('in else block test2');
         }
     }
 })
